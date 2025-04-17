@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-color-tennis-sport-advertising-background-backgroundmotionwork-outtennistreeshand-paintedfreshhouses-image_75815.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Injury Prediction</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+    </nav>
+    
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col bg-light">
+                <h1>Injury Prediction Form</h1>
+                <p>Please enter the player's details.</p>
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row mt-3 mb-4">
+            <div class="col-3"></div>
+            <div class="col bg-light">
+                
+                <h3>Injury Prediction: {% if predict[0] == 0 %}Not Injured {% endif %} {% if predict[0] == 1 %} Injured {% endif %}</h3>
+                
+            </div>
+            <div class="col-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col bg-light p-2">
+                <form action="http://localhost:5000/" method="post">
+                    <div class="form-group">
+                        <label for="age">Player Age</label>
+                        <input type="text" class="form-control" id="age" name="Player_Age" placeholder="Enter age" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Player Weight</label>
+                        <input type="text" class="form-control" id="age" name="Player_Weight" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Player Height</label>
+                        <input type="text" class="form-control" id="age" name="Player_Height" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Player Injury</label>
+                        <select class="form-control" id="age" name="Previous_Injuries" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Training Intensity</label>
+                        <input type="text" class="form-control" id="age" name="Training_Intensity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Recovery Time</label>
+                        <input type="text" class="form-control" id="age" name="Recovery_Time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">BMI Classification Normal</label>
+                        <select class="form-control" id="age" name="BMI_Classification_Normal" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">BMI Classification Obesity1</label>
+                        <select class="form-control" id="age" name="BMI_Classification_Obesity1" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">BMI Classification Obesity11</label>
+                        <select class="form-control" id="age" name="BMI_Classification_Obesity11" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">BMI Classification Overweight</label>
+                        <select class="form-control" id="age" name="BMI_Classification_Overweight" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">BMI Classification Underweight</label>
+                        <select class="form-control" id="age" name="BMI_Classification_Underweight" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-sm btn-primary form-control">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
